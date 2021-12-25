@@ -563,9 +563,187 @@ body {
   }
 }
 
+/* About */
 
+.about {
+  padding: 100px 0;
+}
+.about__block {
+  margin: 0 0 100px 0;
+  display: flex;
+  &:last-child {
+    margin: 0;
+  }
+}
+.about__block-img {
+  flex: 0 0 50%;
+  max-width: 785px;
+  max-height: 1176px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.about__block-text {
+  padding: 90px 0 0 0;
+  flex: 0 0 50%;
+  line-height: 150%;
+  display: flex;
+}
+.about__block-text-left {
+  justify-content: left;
+}
+.about__block-text-right {
+  justify-content: right;
+}
+.about__block-text-inner {
+  padding: 61px 50px 61px 30px;
+  width: 737px;
+  height: 650px;
+  background: #ffffff;
+  position: relative;
+}
+.about__block-text-inner1 {
+  right: 10%;
+}
+.about__block-text-inner2 {
+  left: 10%;
+}
 
+/* Contacts */
 
+.contacts {
+  padding: 160px 0 42px 0;
+}
+.contacts__row {
+  display: flex;
+}
+.contacts-info {
+  flex: 0 0 50%;
+}
+.contacts-info__text {
+  margin: 0 0 145px 0;
+  font-size: 36px;
+  line-height: 160%;
+  color: #2d3538;
+  p {
+    margin: 0 0 25px 0;
+    &:last-child {
+      margin: 0;
+    }
+    a {
+      color: inherit;
+      &:hover {
+        color: #efd2c2;
+        transition: all 0.3s ease 0s;
+      }
+    }
+  }
+}
+.contacts-info__icons {
+}
+.contacts-info__time {
+  margin: 0 0 40px 0;
+  padding: 0 0 0 90px;
+  font-size: 25px;
+  line-height: 160%;
+  color: #2d3538;
+}
+.contacts-info__icons-wrapper {
+  display: flex;
+}
+.contacts-info__icon {
+  margin: 0 20px 0 0;
+  &:last-child {
+    margin: 0;
+  }
+  svg {
+    fill: block;
+  }
+  &:hover {
+    fill: white;
+    background-color: #000;
+    transition: all 0.3s ease 0s;
+  }
+}
+.social--icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2d3538;
+}
+.contacts-form {
+  flex: 0 0 50%;
+}
+.contacts-form__wrapper {
+  max-width: 480px;
+  text-align: center;
+}
+.contacts-form__title {
+  margin: 0 0 15px 0;
+  font-size: 36px;
+  line-height: 150%;
+}
+.contacts-form__subtitle {
+  margin: 0 0 40px 0;
+  font-size: 25px;
+  line-height: 150%;
+}
+.contacts-form__row {
+  p {
+    margin: 0 0 20px 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+.contacts-form__input {
+  padding: 0 14px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid #2d3538;
+  font-size: 25px;
+  &::placeholder {
+    font-size: 20px;
+    line-height: 160%;
+    color: #2d3538;
+    opacity: 0.6;
+  }
+}
+.contacts-form__textarea {
+  padding: 14px 14px;
+  border: 1px solid #2d3538;
+  resize: vertical;
+  min-height: 166px;
+  max-height: 350px;
+  width: 100%;
+  font-size: 25px;
+  &::placeholder {
+    font-size: 20px;
+    line-height: 160%;
+    color: #2d3538;
+    opacity: 0.6;
+  }
+}
+.contacts-form__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 482px;
+  height: 57px;
+  background: #2d3538;
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  color: #efd2c2;
+  &:hover {
+    background-color: #efd2c2;
+    color: #2d3538;
+    transition: all 0.3s ease 0s;
+  }
+}
 
 @media (max-width: 1420px) {
   .write-right__body {
@@ -576,6 +754,26 @@ body {
   }
   .write-right__column-text {
     margin: 0;
+  }
+  .about__block {
+    margin: 0;
+    flex-direction: column;
+  }
+  .about__block-img {
+  }
+  .about__block-text {
+    padding: 0;
+    justify-content: right;
+  }
+  .about__block-text-inner {
+    margin: -22% 0 0 0;
+    width: 90%;
+    height: 100%;
+    right: 0;
+    left: 0;
+  }
+  .about__block-text-right {
+    order: 3;
   }
 }
 @media (max-width: 1260px) {
@@ -639,6 +837,29 @@ body {
       width: 100%;
       text-align: center;
     }
+  }
+  .contacts {
+    padding: 100px 0;
+  }
+  .contacts__row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacts-info {
+    margin: 0 0 80px 0;
+  }
+  .contacts-info__text {
+    margin: 0 0 40px 0;
+  }
+  .contacts-info__time {
+    padding: 0;
+    text-align: center;
+  }
+  .contacts-form__title {
+    margin: 0 0 20px 0;
+  }
+  .contacts-form__subtitle {
+    margin: 0 0 30px 0;
   }
 }
 @media (max-width: 860px) {
@@ -737,12 +958,6 @@ body {
   }
   .header__burger-icon {
     margin: 0 13px 0 0;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #2d3538;
     &:last-child {
       margin: 0;
     }
@@ -829,6 +1044,73 @@ body {
   }
   .footer-right__icons {
     justify-content: center;
+  }
+  .about {
+    padding: 35px 0 0 0;
+  }
+  .about__block-text {
+    font-size: 15px;
+  }
+  .about__block-text-inner {
+    padding: 29px 13px 14px 22px;
+  }
+  .about__block {
+    margin: -108px 0 0 0;
+    &:first-child {
+      margin: 0;
+    }
+    &:last-child {
+      margin: -108px 0 0 0;
+    }
+  }
+  .contacts__row {
+    align-items: stretch;
+  }
+  .contacts-form {
+    display: flex;
+    justify-content: center;
+  }
+  .contacts-info__icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacts-info__text {
+    font-size: 30px;
+    line-height: 160%;
+  }
+  .contacts-form__wrapper {
+    max-width: 100%;
+  }
+  .contacts-form__title {
+    font-size: 30px;
+    line-height: 150%;
+  }
+  .contacts-form__subtitle {
+    font-size: 20px;
+    line-height: 150%;
+  }
+  .contacts-form__input {
+    padding: 0 13px;
+    height: 46px;
+    font-size: 18px;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 160%;
+    }
+  }
+  .contacts-form__textarea {
+    padding: 12px 13px;
+    min-height: 123px;
+    font-size: 18px;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 160%;
+    }
+  }
+  .contacts-form__btn {
+    width: 100%;
+    font-size: 20px;
   }
 }
 @media (max-width: 600px) {
@@ -938,6 +1220,9 @@ body {
   }
 }
 @media (max-width: 400px) {
+  .header__row {
+    height: 60px;
+  }
   .first-block {
     background-position: right center;
   }
@@ -949,5 +1234,8 @@ body {
   }
   .instagram__photo-column {
     flex: 0 0 100%;
+  }
+  .about__block-text {
+    font-size: 13px;
   }
 }
